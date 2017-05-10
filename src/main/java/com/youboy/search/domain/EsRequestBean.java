@@ -4,10 +4,6 @@ import net.sf.json.JSONObject;
 
 public class EsRequestBean {
 
-	public enum RequestType {
-		DELETE, INDEX
-	}
-
 	private RequestType requestType;
 	private String index;
 	private String type;
@@ -83,5 +79,9 @@ public class EsRequestBean {
 	public void setIndexValue(JSONObject indexValue) {
 		this.indexValue = indexValue;
 	}
+
+    public enum RequestType {
+        DELETE, INDEX
+    }
 
 }

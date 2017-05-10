@@ -18,13 +18,13 @@ import java.util.concurrent.atomic.AtomicLong;
 public class Consumer extends AbstractConsumer {
 
     public static final Logger logger = LoggerFactory.getLogger(Consumer.class);
-    private Client client;
-    private ThreadPoolExecutor executor;
     // 用于记录日志
     public static AtomicLong mqDeleteNum = new AtomicLong(0);
     public static AtomicLong mqIndexNum = new AtomicLong(0);
     public static AtomicLong esDeleteNum = new AtomicLong(0);
     public static AtomicLong esIndexNum = new AtomicLong(0);
+    private Client client;
+    private ThreadPoolExecutor executor;
 
     private void init() {
         initESClient();
